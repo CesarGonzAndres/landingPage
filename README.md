@@ -1,13 +1,13 @@
-** Landing Page Responsive **
+# Landing Page Responsive 
 
-** step 1:**
+#### Step 1:
 
 *  npm install
 
-** step 2:**
+#### Step 2: 
 
 * bower install
 
-** step 3:**
+#### Step 3: 
 
 * gulp serve
