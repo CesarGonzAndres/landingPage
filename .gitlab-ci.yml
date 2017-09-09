@@ -1,0 +1,67 @@
+stages:
+  - build_front
+  - build
+  - deploy
+cache:
+  paths:
+    - dist/
+build_front:
+  stage: build_front
+  image: node:latest
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+  only:
+    - master
+    - /version-.*/
+
+build:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD registry.gitlab.com
+    - docker build -f Dockerfile.production -t $CI_REGISTRY_IMAGE:latest .
+    - docker push $CI_REGISTRY_IMAGE:latest
+  only:
+    - master
+
+build_production:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD registry.gitlab.com
+    - docker build -f Dockerfile.production -t $CI_REGISTRY_IMAGE:$CI_BUILD_TAG .
+    - docker push $CI_REGISTRY_IMAGE:$CI_BUILD_TAG
+  only:
+    - tags
+    - /version-.*/
+
+deploy:
+  stage: deploy
+  image: ubuntu:16.04
+  before_script:
+    # install ssh-agent
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    # run ssh-agent
+    - eval $(ssh-agent -s)
+    # add ssh key stored in SSH_PRIVATE_KEY variable to the agent store
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    # disable host key checking (NOTE: makes you susceptible to man-in-the-middle attacks)
+    # WARNING: use only in docker container, if you use it with shell you will overwrite your user's ssh config
+    - mkdir -p ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  script:
+    - apt-get update -y && apt-get upgrade -y
+    - apt-get install openssl -y
+    - apt-get install openssh-client -y
+    - VERSION=$CI_BUILD_TAG CONTAINER_NAME=$CI_REGISTRY_IMAGE sh bin/deploy.sh
+  only:
+    - tags
+    - /version-.*/
