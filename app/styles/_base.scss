@@ -1,0 +1,52 @@
+
+@import 'node_modules/jeet/scss/index';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+body {
+  font-family: 'Source Sans Pro';
+  margin: 0 !important;
+}
+input, textarea {
+  outline: none;
+  text-indent: 10px;
+  font-size: 10px;
+}
+textarea {
+  padding-top: 10px;
+}
+input {
+  width: 125px;
+}
+h1 {
+  font-size: 40px;
+}
+h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+.separator {
+  position: absolute;
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  left: calc(50% - 40px);
+  margin-top: -20px;
+}
+.separator-block {
+  position: absolute;
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  margin-left: -40px;
+  margin-top: -20px;
+  @media (max-width: 1020px) {
+    left: calc(50% - 40px);
+    margin-left: 0;
+  }
+}
+.center {
+  text-align: center;
+}
+.uppercase {
+  text-transform: uppercase;
+}

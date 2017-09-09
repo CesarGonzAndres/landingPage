@@ -1,0 +1,8 @@
+version: '2'
+services:
+  landpanama-front:
+    image: tsserapp/landpanama-front
+networks:
+  default:
+    external:
+      name: proxy

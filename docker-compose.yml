@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app:
+    container_name: landpanama-front
+    build:
+      context: .
+      dockerfile: Dockerfile.development
+    ports:
+      - "9000:9000"
+    volumes:
+      - "./app/:/usr/src/app/app/"
