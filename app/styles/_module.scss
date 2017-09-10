@@ -7,22 +7,26 @@
   width: 480px;
   height: 115px;
   border: 2px dashed #2b2a2a;
-  background-color: gray;
+  background-color: $gray;
   box-shadow: 5px 5px 150px #131111;
   border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: right;
+  -webkit-box-align: right;
+  -ms-flex-align: right;
   .centered-main--title {
   	font-size: 3rem;
     margin: 0 auto;
-    margin-top: 7%;
+    margin-top: 5%;
     font-weight: bold;
+    letter-spacing: 5px;
   }
 }
 .container--separator {
 	position: relative;
   height: 100px;
-  background-color: grey;
+  background-color: $gray;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,3 +48,17 @@
     height: 300px;
 	}
 }
+.container--beach {
+	.container--title {
+    width: 480px;
+    height: 115px;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: right;
+    -ms-flex-align: right;
+	}
+}
+
+
