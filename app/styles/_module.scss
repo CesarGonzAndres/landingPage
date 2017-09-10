@@ -1,0 +1,46 @@
+.parallax-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.container--title {
+  width: 480px;
+  height: 115px;
+  border: 2px dashed #2b2a2a;
+  background-color: gray;
+  box-shadow: 5px 5px 150px #131111;
+  border-radius: 50px;
+  display: flex;
+  align-items: right;
+  .centered-main--title {
+  	font-size: 3rem;
+    margin: 0 auto;
+    margin-top: 7%;
+    font-weight: bold;
+  }
+}
+.container--separator {
+	position: relative;
+  height: 100px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  .button--feel {
+  	width: 250px;
+  }
+}
+.container--information {
+  display: flex;
+  height: 600px;
+  align-items: center;
+  justify-content: space-around;
+  .container--card {
+		width: 400px;
+    height: 350px;
+	}
+	img {
+    height: 300px;
+	}
+}
