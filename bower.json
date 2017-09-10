@@ -2,7 +2,8 @@
   "name": "terrenowebsite2-front",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "materialize": "^0.100.2"
   },
   "devDependencies": {
     "chai": "^4.1.2",
