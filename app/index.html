@@ -4,166 +4,59 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Responsive Page</title>
+    <title>ScortChile Admin Front</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
+
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/materialize/dist/css/materialize.css" />
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="/bower_components/angular-carousel/dist/angular-carousel.css" />
+    <link rel="stylesheet" href="/bower_components/ng-img-crop/compile/minified/ng-img-crop.css" />
     <!-- endbower -->
     <!-- endbuild -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-  <body>
+  <body ng-app="escortAdmin">
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-  <ul id="slide-out" class="side-nav">
-    <li><div class="user-view">
-      <div class="background">
-        <img src="images/gallery/paris.jpeg">
-      </div>
-      <a href="#!user"><img class="circle" src="images/gallery/london.jpg"></a>
-      <a href="#!name"><span class="white-text name">Cesar Gonzalez</span></a>
-      <a href="#!email"><span class="white-text email">cesargonzandres@gmail.com</span></a>
-    </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-  </ul>
-
-  <nav class="bg-gray">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo right">Logo</a>
-      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="#">Sass</a></li>
-        <li><a href="#">Components</a></li>
-        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-        <!-- Dropdown Structure -->
-        <ul id="dropdown1" class="dropdown-content">
-          <li><a href="#!">one</a></li>
-          <li><a href="#!">two</a></li>
-          <li class="divider"></li>
-          <li><a href="#!">three</a></li>
-        </ul>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="parallax-container">
-    <div class="container--title z-depth-5">
-      <p class="font-white centered-main--title">Famous Cities</p>
-    </div>
-    <div class="parallax"><img src="images/gallery/1.jpg"></div>
-  </div>  
-  
-  <div class="container--separator">
-    <button class="waves-effect waves-light btn brown darken-3"><i class="material-icons left">cloud</i>Where have you been</button>
-  </div>
-
-  <div class="container--information">
-    <div class="article container--card">
-      <div class="card grande">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="images/gallery/london.jpg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">London<i class="material-icons right">more_vert</i></span>
-          <p><a href="#">This is a link</a></p>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">London<i class="material-icons right">close</i></span>
-          <p>London is the capital city of England. It is the most populous city in the United Kingdom,
-            with a metropolitan area of over 13 million inhabitants.</p>
-        </div>
-      </div>
-    </div>
-          
-    <div class="article container--card">
-      <div class="card grande">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="images/gallery/paris.jpeg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Paris<i class="material-icons right ">more_vert</i></span>
-          <p><a href="#">This is a link</a></p>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Paris<i class="material-icons right">close</i></span>
-          <p>Paris is the capital and most populous city of France.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="article container--card">
-      <div class="card grande">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="images/gallery/tokyo.jpg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Tokyo<i class="material-icons right">more_vert</i></span>
-          <p><a href="#">This is a link</a></p>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Tokyo<i class="material-icons right">close</i></span>
-          <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
-       and the most populous metropolitan area in the world.</p>
-        </div>
-      </div>
-    </div>
-  </div>  
- 
-  <div class="parallax-container container--beach">
-    <div class="container--title">
-      <p class="font-white centered-main--title">Beaches Privileges</p>
-    </div>
-    <div class="parallax"><img src="images/gallery/3.jpg"></div>
-  </div>  
-  
-  <footer class="page-footer bg-gray">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      © 2017 Copyright Text
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-      </div>
-    </div>
-  </footer>
+    <ui-view></ui-view>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/materialize/dist/js/materialize.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.js"></script>
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <script src="/bower_components/angular-touch/angular-touch.js"></script>
+    <script src="/bower_components/angular-carousel/dist/angular-carousel.js"></script>
+    <script src="/bower_components/ngMask/dist/ngMask.js"></script>
+    <script src="/bower_components/ng-file-upload/ng-file-upload.js"></script>
+    <script src="/bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
+    <script src="/bower_components/satellizer/dist/satellizer.js"></script>
+    <script src="/bower_components/ng-droplet/dist/ng-droplet.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/components/sidenav.js"></script>
+    <script src="scripts/controllers/components/header.js"></script>
     <!-- endbuild -->
-
   </body>
 </html>

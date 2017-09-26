@@ -3,10 +3,26 @@
   "private": true,
   "dependencies": {
     "jquery": "~2.1.1",
-    "materialize": "^0.100.2"
+    "angular": "^1.6.6",
+    "angular-aria": "^1.6.6",
+    "angular-resource": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "angular-sanitize": "^1.6.6",
+    "angular-ui-router": "0.4.2",
+    "materialize": "^0.100.2",
+    "angular-material": "^1.1.5",
+    "angular-carousel": "^1.1.0",
+    "ngMask": "angular-mask#^3.1.1",
+    "ng-file-upload": "^12.2.13",
+    "ng-img-crop": "ngImgCrop#^0.3.2",
+    "satellizer": "^0.15.5",
+    "ng-droplet": "^0.7.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "mocha": "^3.5.0"
+  },
+  "resolutions": {
+    "angular": "1.6.6"
   }
 }

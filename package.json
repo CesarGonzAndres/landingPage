@@ -39,11 +39,10 @@
       "browser": true,
       "jquery": true
     },
-    "rules": {
-      "quotes": [
-        2,
-        "single"
-      ]
+    "scripts": {
+      "start": "gulp serve",
+      "lint": "gulp lint",
+      "build": "gulp"
     }
   }
 }
