@@ -1,0 +1,64 @@
+.uppercase {
+  text-transform: uppercase;
+}
+.text-ident {
+  text-indent: 20px;
+}
+.padd-0 {
+  padding: 0 !important;
+}
+.padd-20 {
+  padding: 20px !important;
+}
+.padd-lr-20 {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+.padd-t-b-5 {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.h-450 {
+  height: 450px;
+}
+.inline-flex {
+  display: inline-flex !important;
+}
+.square-price {
+  border: 1px solid $white;
+  padding: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+md-chips.chips-container {
+  position: static;
+  overflow: auto;
+  width: 100%;
+  height: 45px;
+  display: flex !important;
+}
+md-chips-wrap#_md-chips-wrapper-1 {
+  // display: flex !important;
+}
+md-chips.md-scort-red-theme-theme md-chip.md-focused {
+  background: $red;
+}
+.flex-button {
+  display: inline-flex;
+}
+.padd-lrt-0 {
+  padding: 20px 20px 0px 20px !important;
+}
+.bold {
+	font-weight: bold;
+}
+.h-36 {
+	height: 36px !important;
+}
+.input-container-search {
+  margin-top: 4px;
+  margin-left: -10px;
+  height: 20px;
+}

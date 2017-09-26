@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('escortAdmin', [
+  .module('studentsAdmin', [
     'ngAria',
     'ngResource',
     'ngRoute',
@@ -25,7 +25,7 @@ angular
     'ngDroplet'
   ])
   .config(function($stateProvider, $urlRouterProvider, $compileProvider) {
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/');
     $stateProvider
     // APP
     .state('app', {
@@ -34,10 +34,15 @@ angular
       controller: 'MainCtrl',
       abstract: true,
     })
+    .state('app.dashboard', {
+      url: 'dashboard',
+      templateUrl: 'views/dashboard/dashboard.html',
+      controller: 'DashboardCtrl',
+    })
     .state('app.studentsList', {
       url: 'studentsList',
       templateUrl: 'views/students/studentsList.html',
-      controller: 'studentsController',
+      controller: 'studentsController'
     });
   })
   .config(function($mdThemingProvider) {

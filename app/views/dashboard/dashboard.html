@@ -1,0 +1,48 @@
+<md-toolbar md-scroll-shrink>
+  <div class="md-toolbar-tools red-bg">MENSAJERÍA</div>
+</md-toolbar>
+<div class="row margin-lr-0 padd-20" md-theme="escort-red-theme">
+  <div class="row grey-border white-bg padd-20 col s12 l8">
+    <md-content class="white-bg" layout-padding>
+      <div>
+        <form name="userForm" class="col s12 l7" ng-submit="newMessage(dashboard)">
+          <div>
+            <div layout-gt-sm="row">
+              <md-input-container class="md-block" flex-gt-sm>
+                <label>Enviar a:</label>
+                <md-select name="userTypeId" ng-model="dashboard.userTypeId" required>
+                  <md-option value="2">Clientes</md-option>
+                  <md-option value="3">Escorts</md-option>
+                </md-select>
+                <div ng-messages="dashboard.userTypeId.$error" role="alert">
+                  <div ng-message="required" ng-hide="dashboard.userTypeId">
+                    Debes completar este campo para continuar.
+                  </div>
+                </div>
+              </md-input-container>
+            </div>
+            <md-input-container class="md-block">
+              <label>Titulo del Mensaje</label>
+              <input ng-model="dashboard.title" required>
+              <div ng-messages="dashboard.title" role="alert">
+                <div ng-message="required" ng-hide="dashboard.title">
+                  Debes completar este campo para continuar.
+                </div>
+              </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+              <label>Descripción</label>
+              <textarea ng-model="dashboard.message" md-maxlength="140" rows="5" md-select-on-focus required></textarea>
+              <div ng-messages="dashboard.message" role="alert">
+                <div ng-message="required" ng-hide="dashboard.message">
+                  Debes completar este campo para continuar.
+                </div>
+              </div>
+            </md-input-container>
+          </div>
+          <md-button md-theme="escort-blue-theme" type="submit" class="md-raised md-primary padd-lr-20" ng-disabled="!(dashboard.userTypeId && dashboard.title && dashboard.message)">Enviar Mensaje</md-button>
+        </form>
+      </div>
+    </md-content>
+  </div>
+</div>

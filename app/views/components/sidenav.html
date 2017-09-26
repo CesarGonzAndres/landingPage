@@ -1,0 +1,46 @@
+<div ng-controller="SidenavCtrl" class="sidenav" ng-cloak>
+  <section layout="row" flex class="sidenav-size">
+    <md-sidenav
+        class="md-sidenav-left dark-black-bg sidenav-size"
+        md-component-id="left"
+        md-is-locked-open="$mdMedia('gt-sm')"
+        md-whiteframe="4">
+      <md-toolbar class="nav-header dark-black-bg">
+          <div class="user-image" style="background-image: url('https://www.1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png');">
+        </div>
+        <div class="user-name uppercase">{{user.username}}</div>
+        <div class="state-container"><span class="state-indicator"></span><span class="state">online</span></div>
+      </md-toolbar>
+      <md-content class="nav-content">
+       <md-list flex>
+          <md-list-item ui-sref="app.dashboard" ui-sref-active="red-text">
+           <md-icon><img src="images/icons/2.svg" alt="" /></span></md-icon>
+           <span flex>Dashboard</span>
+          </md-list-item>
+         <md-list-item ng-click="list.escorts = !list.escorts">
+          <md-icon><img src="images/icons/3.svg" alt="" /></span></md-icon>
+          <span flex>Escorts</span>
+          <md-icon class="white-text" ng-show="!list.escorts">expand_more</md-icon>
+          <md-icon class="white-text" ng-show="list.escorts">expand_less</md-icon>
+         </md-list-item>
+           <md-list-item ng-show="list.escorts" ui-sref="app.newEscort" ui-sref-active="red-text">
+            <span class="sub-item">Crear Escort</span>
+           </md-list-item>
+           <md-list-item ng-show="list.escorts" ui-sref="app.escortList" ui-sref-active="red-text">
+            <span class="sub-item">Lista de Escorts</span>
+           </md-list-item>
+        </md-list>
+        <md-list flex hide-gt-sm class="down-list">
+           <md-list-item>
+            <md-icon><img src="images/icons/5.svg" alt="" /></span></md-icon>
+            <span flex>Notificaciones</span>
+           </md-list-item>
+          <md-list-item ng-click="logoutConfirm()">
+           <md-icon><img src="images/icons/6.svg" alt="" /></span></md-icon>
+           <span flex>Cerrar Sesión</span>
+          </md-list-item>
+         </md-list>
+      </md-content>
+    </md-sidenav>
+  </section>
+</div>

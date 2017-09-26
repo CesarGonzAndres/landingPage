@@ -1,9 +1,25 @@
-// bower:scss
-// endbower
 
-@import 'node_modules/jeet/scss/index';
-@import '_variables.scss';
-@import '_base.scss';
-@import '_colors.scss';
-@import '_module.scss';
-@import '_modal.scss';
+// * BASE
+@import "base/_variables";
+@import "base/_colors";
+@import "base/_base";
+
+// * BLOCKS
+@import "blocks/_header";
+@import "blocks/_sidenav";
+@import "blocks/_containers";
+
+// * ELEMENTS
+@import "elements/_inputs";
+@import "elements/_content--elements";
+@import "elements/_login--icons";
+@import "elements/_buttons";
+@import "elements/_datepicker";
+@import "elements/_header--elements";
+@import "elements/_sidenav--elements";
+@import "elements/_modals--elements";
+
+// * MODIFIERS
+@import "modifiers/_modifiers";
+@import "modifiers/_margins";
+@import "modifiers/_ngDroplet";
